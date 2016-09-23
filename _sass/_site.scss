@@ -40,20 +40,12 @@ body {
   padding: 2%;
 
   &-title {
-    font-weight: 300;
     a {
-      color: $base-color;
-
       &:hover,
       &:focus {
         text-decoration: none;
       }
     }
-
-    span {
-      color: lighten($base-color, 60);
-    }
-
   }
 
   &-nav {
@@ -86,7 +78,6 @@ body {
 	text-transform: uppercase;
 
 	a {
-		color: $base-color;
 
 		&:hover,
 		&:focus {
@@ -247,7 +238,7 @@ body {
         padding: .5px 5px;
       }
       .count {
-        background-color: lighten($base-color,40);
+        background-color: $accent-color;
 				border-radius: 0 3px 3px 0;
       }
       &:hover {
@@ -319,6 +310,10 @@ body {
 .footer {
   text-align: center;
   font-size: .75rem;
+
+  hr {
+    border-color: $accent-color
+  }
 
   &-link {
     margin: .2rem;

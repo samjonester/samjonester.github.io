@@ -2,37 +2,40 @@
 #   K i k o - p l u s   #
 # # # # # # # # # # # # #
 
+Based on theme:
+  https://git@hgithub.com/AWEEKJ/Kiko-plus.git
+
 # Basic
-name:               "Kiko Plus"
+name:               "Sam Jones"
 
 
 
 author:
-  name:             your-name
-  facebook:         your-id
-  twitter:          your-id
-  github:           your-id
-  linkedin:         your-id
-  medium:           your-id
-  tumblr:           your-id
-  email:            your-id@your-email.com
+  name:             Sam Jones
+  # facebook:         your-id
+  twitter:          samjonester
+  github:           samjonester
+  linkedin:         samlawrencejones
+  # medium:           your-id
+  # tumblr:           your-id
+  email:            sam@samljones.com
 
 # Google-analytics
 google-analytics:
-  id:               ""
+  id:               "UA-28008233-1"
 
 # Disqus
-disqus:
-  id:               "your-id"
+# disqus:
+  # id:               "your-id"
 
 # URL
-url:                "https://AWEEKJ.github.io"
-#url:               "localhost:4000"
+url:                "http://localhost:4000"
+# url:                "http://samljones.com"
 baseurl:            ""
 
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:           Asia/Seoul
+timezone:           America/New_York
 permalink:          /:year-:month-:day/:title/
 
 # Pagination
@@ -52,8 +55,6 @@ nav:
     url:            "/archive"
   - name:           "Tags"
     url:            "/tags"
-  - name:           "Github"
-    url:            "https://github.com/AWEEKJ/Kiko-plus"
 
 
 

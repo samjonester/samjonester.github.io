@@ -14,13 +14,14 @@ $code-gist-font: Menlo, Monaco, "Courier New", monospace !important;
   Color
   -------------- */
 $base-color: rgba(#333,0.8);
+$accent-color: #16982B;
 $base-lighten-color: lighten($base-color, 50);
 
 $background-color: #fff;
 $background-over-color: #f5f7f9;
 
 $text-color: #333;
-$link-color: #268bd2;
+$link-color: $accent-color;
 $code-color: #bf616a;
 $code-background-color: #f9f9f9;
 $table-border-color: #e5e5e5;
