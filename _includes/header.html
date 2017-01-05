@@ -1,6 +1,9 @@
 <header class="header">
   <h1 class="header-title">
     <a href="{{ site.baseurl }}">{{ site.name }}</a>
+    {% if site.author.twitter %}
+    &nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://twitter.com/{{ site.author.twitter }}">@{{ site.author.twitter }}</a>
+    {% endif %}
   </h1>
   <nav class="header-nav">
     {% for nav in site.nav %}

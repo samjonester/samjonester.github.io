@@ -4,6 +4,9 @@ layout: default
 <header>
   <h1 class="header-small">
     <a href="{{ site.url }}">{{ site.name }}</a>
+    {% if site.author.twitter %}
+    &nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://twitter.com/{{ site.author.twitter }}">@{{ site.author.twitter }}</a>
+    {% endif %}
   </h1>
 </header>
 <div class="post">
