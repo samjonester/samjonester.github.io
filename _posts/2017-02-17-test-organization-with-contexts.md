@@ -12,7 +12,7 @@ comments: false
 share: true
 ---
 
-Many of my favorite languages have testing libraries that support specs. Specs allow us to define testing contexts that help isolate and focus our unit tests. Many of my favorite languages have [testing libraries that support specs][spec-frameworks-list]. Two distinct standouts that do not support contexts are C# and Java; luckily, their language features still allow the same goals to be achieved. Before we look at how to use them, let's talk about why contexts are awesome!
+Many of my favorite languages have [testing libraries that support specs][spec-frameworks-list]. Two distinct standouts that do not support contexts are C# and Java; luckily, their language features still allow the same goals to be achieved. Before we look at how to use them, let's talk about why contexts are awesome!
 
 ## Defining Contexts For Test Separation
 It’s beneficial to separate the setup and the “context” around a method call within a class. This allows a single test or set of tests to use similar setup or default values. The setup will be focused on one entry into the method under test, and extraneous noise can be eliminated.
