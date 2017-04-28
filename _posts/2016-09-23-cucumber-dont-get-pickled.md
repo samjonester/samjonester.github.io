@@ -44,46 +44,53 @@ I’m going to assume that you are test driving each component of the user story
 ## Diligently Decide the Level of Integration for Every Feature
 Will this test be a UI test, an API test, an integration test, or even a component test? Let’s define each layer appropriately so that we can examine their strengths and weaknesses. Misusing or overusing different levels will pickle even the best defined cucumber!
 
-1. **UI Tests** – UI tests will cover your entire application. They interact with the application from the outside in. They click buttons, fill in forms, and examine data in the UI (but in a declarative manner!). This type of test is accomplished with a tool like capybara + selenium. These tests make up the tip of the testing pyramid. UI tests should be used mainly for high level journey tests. They can also be used to test complicated UI interactions.
-  - **Pros:**
-    - Cover much more of your application code than any other type of test.
-    - Most closely resemble user interaction with your application.
-    - Truly allow outside in testing.
-  - **Cons:**
-    - Much slower than any other type of test because server and client frameworks are both involved, including the client side testing framework used to drive UI interactions.
-    - Very fragile, as any change in any layer under test has the potential to break this type of test.
-    - Tests from the outside using a tool like selenium can easily become flaky, and failures can easily become ignorable noise due to false negatives.
-    - The fact that your are testing the entire application stack has the potential to demotivate test driving difficult layers in the stack. This is especially true for hard to test UI code. Its very easy to fall into a trap of writing untested code, knowing that you’ll cover it with selenium, and *untested code becomes unmaintainable code*.
+_**UI Tests**_<br/>
+UI tests will cover your entire application. They interact with the application from the outside in. They click buttons, fill in forms, and examine data in the UI (but in a declarative manner!). This type of test is accomplished with a tool like capybara + selenium. These tests make up the tip of the testing pyramid. UI tests should be used mainly for high level journey tests. They can also be used to test complicated UI interactions.
+- **Pros:**
+  - Cover much more of your application code than any other type of test.
+  - Most closely resemble user interaction with your application.
+  - Truly allow outside in testing.
+- **Cons:**
+  - Much slower than any other type of test because server and client frameworks are both involved, including the client side testing framework used to drive UI interactions.
+  - Very fragile, as any change in any layer under test has the potential to break this type of test.
+  - Tests from the outside using a tool like selenium can easily become flaky, and failures can easily become ignorable noise due to false negatives.
+  - The fact that your are testing the entire application stack has the potential to demotivate test driving difficult layers in the stack. This is especially true for hard to test UI code. Its very easy to fall into a trap of writing untested code, knowing that you’ll cover it with selenium, and *untested code becomes unmaintainable code*.
     - Application boundaries will typically not be mocked, meaning a live “test” database or live “test” environment for external API calls is almost always necessary.
-2. **API Tests** – API tests will cover each interaction with the application as a stateless API call. Like UI tests, they interact with the application from the outside in. This type of test is typically accomplished with an HTTP request library like Rest Client. These tests are very close to the tip of the testing pyramid. API tests should be used mainly for high level feature testing. API tests are good for testing high level happy path user stories defined by our declarative features.
-  - **Pros:**
-    - Cover integration of all server side application code.
-    - API calls can be defined to match user interactions from user stories.
-    - Allows for outside in testing of server code.
-    - Faster than UI tests.
-    - Less fragile than UI tests.
-  - **Cons:**
-    - Slower than all testing types except UI tests because the entire server side framework is involved.
-    - Does not test client side code.
-    - It’s hard to mock application boundaries with outside in API tests, so you will generally be relying on a live “test” database, or a live “test” environment for external API calls.
-3. **Integration Tests** – Integration tests will execute production code and test the integration between all components within a feature. These tests are generally smaller and more specific than user stories, but still large enough to define an internal API. I’ve had success using this type of testing to drive development of large units of development. Integration tests should make up the bulk of your cucumber features, falling in middle of the testing pyramid. They should should be used much more sparingly than unit/component tests in a testing framework like RSpec or MiniTest. Following top down TDD, these types of tests will allow you to keep your unit tests green, while having a red integration test to drive development. They should be leveraged to test component integration over the happy path. This type of test can also be used sparingly to test non-happy path, and complicated use cases that should be collaborated on between developer and product owner.
-  - **Pros:**
-    - Useful to drive development of large units of development, where it’s hard to keep all pieces assembled in your head.
-    - Internal API can be formed from the outside in with a YAGNI approach.
-    - Allows for collaboration at a smaller level than user stories.
-    - Much less fragile than API and UI tests.
-    - Much faster, since the framework is not involved and production code is directly called.
-    - Application boundaries are generally easier to mock or stub, since production code is directly called.
-  - **Cons:**
-    - Application boundaries can become hard to mock or stub depending on the number of external dependencies, meaning that reliance on a live “test” database, or a live “test” environment for external API calls could become necessary.
-    - Most of the framework is typically eliminated in this type of test, meaning that there is no coverage of the integrations between your code and framework code.
-4. **Component Tests** – Component tests act as unit tests written as cucumber features. They are usually a wrapper around one or a small number of components that also have unit coverage. Because of the size, there isn’t much benefit to this type of testing in most situations. This means that they should be used very sparingly to prevent unnecessary test maintenance. I’ll go into more detail about successful strategies for using this type of cucumber test below in “Domain Specific Exceptions.”
-  - **Pros:**
-    - Allow collaboration on complicated domains.
-    - Allow a human readable unit testing framework for product owners.
-  - **Cons:**
-    - Essentially becomes duplicated coverage of use cases defined in unit tests.
-    - Because of their small size, do not provide much value in testing integration between components.
+
+_**API Tests**_<br/>
+API tests will cover each interaction with the application as a stateless API call. Like UI tests, they interact with the application from the outside in. This type of test is typically accomplished with an HTTP request library like Rest Client. These tests are very close to the tip of the testing pyramid. API tests should be used mainly for high level feature testing. API tests are good for testing high level happy path user stories defined by our declarative features.
+- **Pros:**
+  - Cover integration of all server side application code.
+  - API calls can be defined to match user interactions from user stories.
+  - Allows for outside in testing of server code.
+  - Faster than UI tests.
+  - Less fragile than UI tests.
+- **Cons:**
+  - Slower than all testing types except UI tests because the entire server side framework is involved.
+  - Does not test client side code.
+  - It’s hard to mock application boundaries with outside in API tests, so you will generally be relying on a live “test” database, or a live “test” environment for external API calls.
+
+_**Integration Tests**_<br/>
+Integration tests will execute production code and test the integration between all components within a feature. These tests are generally smaller and more specific than user stories, but still large enough to define an internal API. I’ve had success using this type of testing to drive development of large units of development. Integration tests should make up the bulk of your cucumber features, falling in middle of the testing pyramid. They should should be used much more sparingly than unit/component tests in a testing framework like RSpec or MiniTest. Following top down TDD, these types of tests will allow you to keep your unit tests green, while having a red integration test to drive development. They should be leveraged to test component integration over the happy path. This type of test can also be used sparingly to test non-happy path, and complicated use cases that should be collaborated on between developer and product owner.
+- **Pros:**
+  - Useful to drive development of large units of development, where it’s hard to keep all pieces assembled in your head.
+  - Internal API can be formed from the outside in with a YAGNI approach.
+  - Allows for collaboration at a smaller level than user stories.
+  - Much less fragile than API and UI tests.
+  - Much faster, since the framework is not involved and production code is directly called.
+  - Application boundaries are generally easier to mock or stub, since production code is directly called.
+- **Cons:**
+  - Application boundaries can become hard to mock or stub depending on the number of external dependencies, meaning that reliance on a live “test” database, or a live “test” environment for external API calls could become necessary.
+  - Most of the framework is typically eliminated in this type of test, meaning that there is no coverage of the integrations between your code and framework code.
+
+_**Component Tests**_<br/>
+Component tests act as unit tests written as cucumber features. They are usually a wrapper around one or a small number of components that also have unit coverage. Because of the size, there isn’t much benefit to this type of testing in most situations. This means that they should be used very sparingly to prevent unnecessary test maintenance. I’ll go into more detail about successful strategies for using this type of cucumber test below in “Domain Specific Exceptions.”
+- **Pros:**
+  - Allow collaboration on complicated domains.
+  - Allow a human readable unit testing framework for product owners.
+- **Cons:**
+  - Essentially becomes duplicated coverage of use cases defined in unit tests.
+  - Because of their small size, do not provide much value in testing integration between components.
 
 ## Drive Development with Cucumber
 We’ve collaborated with the product owner to define our feature, so we understand it well. We’ve got our short, declarative feature that will be maintainable and easy to understand in the future. We’re sure that the value we’ll receive from our tests will be in the integration between the complicated moving pieces of our application. We’ve also decided which level of integration is appropriate for testing our feature. *Now What?*
