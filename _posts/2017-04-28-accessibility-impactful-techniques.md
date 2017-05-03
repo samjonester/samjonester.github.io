@@ -68,8 +68,8 @@ Static testing is nice, but doesn’t replace manual testing. Static tests can o
 
 Start taking action today, as any action will improve the [usability][accessibility-usability] of your site.
 
-[accessibility-usability]: /posts/2017-04-07-accessibility-is-usability.html
-[accessibility-continuum]: /posts/2017-04-07-accessibility-is-usability.html#continuum
+[accessibility-usability]: /2017-04-07/accessibility-is-usability
+[accessibility-continuum]: /2017-04-07/accessibility-is-usability#continuum
 [keyboard-accessibility]: https://www.nngroup.com/articles/keyboard-accessibility/
 [native-elements]: https://marcysutton.com/links-vs-buttons-in-modern-web-applications/
 [tabindex]: http://accessibleculture.org/articles/2010/05/tabindex/
