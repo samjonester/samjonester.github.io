@@ -28,7 +28,7 @@ Unfortunately, this means that conditionals tend to grow. What's the easiest cha
 Conditionals mix multiple levels of abstraction in one neat little package. Here's a list of things that I have to keep in my head while I'm reading a conditional:
 
 1. The shape of the conditional to understand the available paths through the application.
-1. The scope of multiple variables as their used within the conditional.
+1. The scope of multiple variables as they're used within the conditional.
 1. The values that are used to determine which path to follow.  
    \* _This often means understanding the structure of a deeply nested object._
 1. The actual code being executed within each path.
@@ -40,12 +40,12 @@ Just thinking about all the things I need to think about leaves me exhausted. Th
 
 Just like those carp, conditionals should be carefully culled. Unfortunately, Slack doesn't have integrations for [electric barriers or poison pills](http://www.chicagotribune.com/news/local/breaking/ct-lake-michigan-asian-carp-met-20160822-story.html). There are a few patterns that I regularly use instead of conditionals. Before blindly adopting any of these techniques, ask if the code can be written [without a conditional](http://michaelfeathers.typepad.com/michael_feathers_blog/2013/11/unconditional-programming.html).
 
-These 3 techniques build on [All the Little Things](https://www.youtube.com/watch?v=8bZh5LMaSm://www.youtube.com/watch?v=8bZh5LMaSmE). They are ways to design components that have a singular focus, rather than a list of responsibilities like we see above.
+These 2 techniques build on [All the Little Things](https://www.youtube.com/watch?v=8bZh5LMaSmE). They are ways to design components that have a singular focus, rather than a list of responsibilities like we see above.
 
 Each technique has a specific problem it solves. Each proposed alternative has a few important things in common.
 
 - The new abstraction has a single purpose. Choose and execute the appropriate path(s) through the application. That's it. Fake paths can be provided for testing the abstraction so details about a specific path aren't complicating the test.
-- Each path has the same 2 methods. One to test whether it should be executed, and one to execute the action. This allows each piece to be defined and tested in isolation. Also we gain valuable names describing each path, helping other developers understand it's purpose.
+- Each path has the same 2 methods. One to test whether it should be executed, and one to execute the action. This allows each piece to be defined and tested in isolation. Also we gain valuable names describing each path, helping other developers understand its purpose.
 
 ### Alternative to if / else if / else
 
