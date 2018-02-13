@@ -15,7 +15,7 @@ We have this power. We can see when the responsibilities of a class grew. We can
 
 ## History is still being written
 
-Understanding how motivations and the current environment influence behavior is fascinating to me. It leads to some of my favorite conversations about code design. I love spreading the understanding that history is still being written. Unlike that ancient Protoceratops, we can reshape our flaws.
+Some of my favorite conversations about code design begin with understanding how past environments influenced behavior. Unlike our paleontologist friend, though, we are not stuck in the past. For us, conversations about the past are a starting place to help design the future.
 
 We can create an environment that motivates change.
 
@@ -28,7 +28,7 @@ One conversation I continue to enjoy is about **responsibility**. The conversati
 From that general structure, there are many ways to ask questions about responsibility. Fortunately for us, these types of questions work very well on code that's already been written.
 
 **Should an account really answer a question about a user?**
-```
+``` ruby
 class Account
   def user_valid_admin?
     !@user.deactivated_at && @user.admin
@@ -37,7 +37,7 @@ end
 ```
 
 **Should an Order really know so much about a Camera?**
-```
+``` ruby
 class Order
   def package_size
     if @camera.compact?
@@ -52,7 +52,7 @@ end
 ```
 
 **Should an Event really build the right Ticket?**
-```
+``` ruby
 class Event
   def self.create_ticket(event_id, customer, seat=nil)
     event = self.find event_id
@@ -67,13 +67,13 @@ class Event
 end
 ```
 <br/>
-The first time I a question like, I was blown away by how it affected my thought process, and I was blown away by the fact that *all I needed to do was ask*.
+The first time I asked a question like this, I was blown away by how it affected my thought process, and I was blown away by the fact that *all I needed to do was ask*.
 
 ## Understanding change
 
-As our code evolves, so do the responsibilities of the classes that we originally wrote. Even the cleanest methods with perfect names eventually change. Unfortunately, change usually means that the purpose of a unit has strayed from its original definition. I see this happen when code is added to a class simply because it already exists, because it's a convenient place to put another conditional.
+As our code evolves, so do the responsibilities of the classes that we originally wrote. Even the cleanest methods with perfect names eventually change. Unfortunately, change usually means that the purpose of a unit has strayed from its original definition. I see this happen when code is added to a class because it already exists &emdash;  because it's a convenient place to put another conditional.
 
-All it takes is a reflective question and we can begin to understand, though. A gut check about responsibility often grows into a more thoughtful exercise where we can define the responsibility a class should have.
+When we start with a reflective question, we can begin to understand, though. A gut check about responsibility often grows into a more thoughtful exercise where we can define the responsibility a class should have.
 
 
 > Each class and each method should have a single purpose, and a name that focuses its responsibilities.
@@ -82,22 +82,22 @@ Questions help us pause to evaluate what's there and how it happened. We can und
 
 ## Redefining responsibility
 
-Our poor dinosaur friend didn't have a chance to move it's misplaced eyeball, but this is software. We don't have the normal constraints of the natural world. We're only constrained by our ability to envision where responsibility should lie.
+Our poor dinosaur friend didn't have a chance to move its misplaced eyeball, but this is software. We don't have the normal constraints of the natural world. We're only constrained by our ability to envision where responsibility should lie.
 
 Where should it lie, then?
 
 **We can ask an object about itself**
-```
+``` ruby
 @user.valid_admin?
 ```
 
 **We can tell an object to perform an action for itself**
-```
+``` ruby
 @camera.package_size
 ```
 
-**We can create classes and methods whose name's reflect their purpose**
-```
+**We can create classes and methods whose names reflect their purpose**
+``` ruby
 class TicketBuilder
   def create(event, customer, seat)
     if customer.vip?
@@ -118,7 +118,7 @@ Each of these changes helps to redefine the responsibilities of a class or metho
 - Each class and method should have one purpose.
 - The responsibilities of the unit should be limited to achieve that purpose.
 - The name of the unit should be accurate and provide focus.
-- The unit should interact with other well named, focused components to clarify its purpose.
+- The unit should interact with other well-named, focused components to clarify its purpose.
 
 Guidelines like this help me answer my own questions and promote the right change. They helped me create the changes to the examples above. They help me create change with the teams I work with. They drive my favorite conversations about responsibility.
 
