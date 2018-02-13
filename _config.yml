@@ -82,5 +82,8 @@ defaults:
 gems:
   - jekyll-seo-tag
   - jekyll-paginate
+  - rouge
 
 exclude:            [vendor]
+
+highlighter: rouge
