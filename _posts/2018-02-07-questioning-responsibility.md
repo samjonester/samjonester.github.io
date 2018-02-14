@@ -71,7 +71,7 @@ The first time I asked a question like this, I was blown away by how it affected
 
 ## Understanding change
 
-As our code evolves, so do the responsibilities of the classes that we originally wrote. Even the cleanest methods with perfect names eventually change. Unfortunately, change usually means that the purpose of a unit has strayed from its original definition. I see this happen when code is added to a class because it already exists &emdash;  because it's a convenient place to put another conditional.
+As our code evolves, so do the responsibilities of the classes that we originally wrote. Even the cleanest methods with perfect names eventually change. Unfortunately, change usually means that the purpose of a unit has strayed from its original definition. I see this happen when code is added to a class because it already exists &mdash;  because it's a convenient place to put another conditional.
 
 When we start with a reflective question, we can begin to understand, though. A gut check about responsibility often grows into a more thoughtful exercise where we can define the responsibility a class should have.
 
