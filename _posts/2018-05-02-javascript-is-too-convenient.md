@@ -22,4 +22,4 @@ Learn ways to give confusing things names, focus on what's important, and write 
 
 <iframe src="https://player.vimeo.com/video/267418198" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-The [video above](https://vimeo.com/267418198) was presented at [Software Craftsmanship North America - New York City](https://scna.softwarecraftsmanship.org/) on April 19, 2018.
+The [video above](https://vimeo.com/267418198) was presented at [SCNA - New York City](https://scna.softwarecraftsmanship.org/) on April 19, 2018.
