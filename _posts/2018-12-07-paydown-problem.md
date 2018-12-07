@@ -52,7 +52,7 @@ Budgeting paydown may finally give you a chance to change those few lines of cod
 > Developer: Soon. It's done. I'm just cleaning up the code / writing some tests / reviewing with so-and-so  
 > Product: Can we just release it and make another ticket to pay that down next week? We can add the extra work to our tech debt epic.
 
-The idea that you can "finish" your activities after delivery gives a team license to redefine the concept of done. You begin to claim that things are done with the assumption that you can _really_ finish it later. Then if later never comes, all you've done is create entropy in your code bases. You're delaying the completion of this activity. You're sacrificing something. Maybe it's your confidence that this thing was built this thing correctly, that the existing system hasn't changed unexpectedly. Maybe it's your ability to safely change this code in the future, when the original authors either aren't around or don't remember why untested, undocumented complexity exists.
+The idea that you can "finish" your activities after delivery gives a team license to redefine the concept of done. You begin to claim that things are done with the assumption that you can _really_ finish it later. Then if later never comes, all you've done is create entropy in your code bases. You're delaying the completion of this activity. You're sacrificing something. Maybe it's your confidence that this thing was built correctly, that the existing system hasn't changed unexpectedly. Maybe it's your ability to safely change this code in the future, when the original authors either aren't around or don't remember why untested, undocumented complexity exists.
 
 You are hoping that you have the discipline to finish this task when there's more pressure to abandon the activity. Some paydown _will_ be deprioritized, regardless of your level of discipline, and what's the fallout if this activity is one of those things?
 
@@ -62,7 +62,7 @@ You are hoping that you have the discipline to finish this task when there's mor
 
 Why should there be a fight at all? Your priorities should be a negotiation with the product owner based on mutual respect and trust. When you "fight" for paydown you're making an interesting statement to the business.
 
-> When we said you that thing you wanted was done, we weren't being truthful. It looks done to you, but it's not. Now, instead of working on the thing we committed to doing next, we're going back to cover our tracks.
+> When we said that thing you wanted was done, we weren't being truthful. It looks done to you, but it's not. Now, instead of working on the thing we committed to doing next, we're going back to cover our tracks.
 
 Your paydown efforts are eroding the trust that allows us to have a productive negotiation with product. Instead of creating a shared understanding of the value you are creating, you're developing animosity for each other. You're declaring that the "other side" is short-sighted, and you need to take defensive action to protect yourselves.
 
