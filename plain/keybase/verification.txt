@@ -1,0 +1,72 @@
+---
+permalink: /.well-known/keybase.txt
+---
+==================================================================
+https://keybase.io/samjonester
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://samljones.com
+  * I am samjonester (https://keybase.io/samjonester) on keybase.
+  * I have a public key with fingerprint E469 ECFB 07C5 8720 5550  78B0 CE96 F22A DBBA DFA8
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01018f4e3fdfb87e4b634b7c169209de51d7314a87319886b107bffc19e547db44370a",
+      "fingerprint": "e469ecfb07c58720555078b0ce96f22adbbadfa8",
+      "host": "keybase.io",
+      "key_id": "ce96f22adbbadfa8",
+      "kid": "01018f4e3fdfb87e4b634b7c169209de51d7314a87319886b107bffc19e547db44370a",
+      "uid": "d0a6dff79b7e4619b9dadb2497166c19",
+      "username": "samjonester"
+    },
+    "service": {
+      "hostname": "samljones.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1550157485,
+  "expire_in": 157680000,
+  "prev": "db4b1fd4bee059679478964d859920edf8fd6dd398a5f32428be42c02fdaea5b",
+  "seqno": 34,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.80
+Comment: https://keybase.io/crypto
+
+yMIpAnicrVJbSBVBGN6TZikWomRXopZISNHdPbO7s6cggjSMKIhumHXa2ZnRTd3d
+9qyaSkUv0eWh0uihxKQbKhTdQIvSLmJqIGFlF7OHHgI7FN0vnpJmpeilx+Zhhpn/
++77/+z+mc1IclxTofnV/aWz4aTRw71Z9OVdI9pyr4ZGNq/hQDV9Cxg5SiknEC5eY
+mA/xgiiIkAISpJgiqBKAlCBAqiEqmiRomMgiVoMi0CHbNQgVJAoqotQQNSIDFSMA
+gqqg81k8Na0i4jquaXlMlgBFIwZFgmrIUJUEWZYFFSLBIJpCJUnHCOmY6pARi+2I
+z2DmkB4h2abN3tglPGbvH/j/7Lt8TA4LuoIpVTXEpBRRQxpmPSWgqaKiMJIPjBDX
+0ssIQ0f0sq22xUIkLr8ji2eFCtMgfrb+MH9BpWOobMMuY3zHtT3bsEtZqdjznEjI
+p3pVjo+tJCj8WyWMTAuzLBmjgrgR07b4kMiQhmf6siILUpRVAOUsnmx3TJeETR8h
+qwoU2PL7kAp/IgSQSDFAhAiypqgaUKGmAAxljSVEMIUUKxgHNajLNCgBCSICJEOQ
+KNaJLiPen2ubZfOhIGA+9SJ/JLPI0r1yl/A7bt8sjOcCSVzC+HH+J+OSElP+fL1c
+cyJ36nD/hS3cutHrh3eObtm16HR009mqpozlg0dGkj7MOnHtUHJmwvsFtY0ZqMno
+b4hVHt/dGk2f2fii2UqNZm648+Dz+biCRujVOe3bFy9JfznatrN5xrfLfUfzDqRX
+xyce67tRU55Sb3flrU2Jfd+d277keXH9nti1oYZV0bd5y14nc9cj84NOjpN8bGB6
++iXlTPUKnDx14ZuldBt4Fr9mf3UdfPN1wpNH7zqvDH56uK+J5OfO54dbr+ppgdXP
+fuztGYBpc5G7eV7+0ZyOg8Lp1A9TuMlzYpP2taS1dawMXBxysntzCjraC0c/bly/
+TJ32+OfsUG937d2Rlp6uL2FYnH9y8YxfDuFKcQ==
+=Dp60
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/samjonester
+
+==================================================================
+
