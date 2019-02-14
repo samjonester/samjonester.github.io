@@ -67,7 +67,13 @@ sass:
 defaults:
   -
     scope:
-      path:         ""
+      path:         "plain"
+      type:         "plain"
+    values:
+      layout:       "plain"
+  -
+    scope:
+      path:         "pages"
       type:         "pages"
     values:
       layout:       "page"
